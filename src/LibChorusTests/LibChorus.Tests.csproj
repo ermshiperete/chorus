@@ -204,6 +204,7 @@
     <Compile Include="VcsDrivers\Mercurial\Utf8Tests.cs" />
     <Compile Include="VcsDrivers\RepositoryAddressTests.cs" />
     <Compile Include="FileHandlers\ChorusFileTypeHandlerCollectionTests.cs" />
+    <Compile Include="notes\EmbeddedMessageContentHandlerRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibChorus.TestUtilities\LibChorus.TestUtilities.csproj">

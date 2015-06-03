@@ -9,12 +9,14 @@ using System.Xml;
 using Chorus.merge.xml.generic;
 using Chorus.notes;
 using L10NSharp;
+using System.ComponentModel.Composition;
 
 namespace Chorus.UI.Notes
 {
 	/// <summary>
 	///
 	/// </summary>
+	[Export(typeof(IEmbeddedMessageContentHandler))]
 	public class MergeConflictEmbeddedMessageContentHandler : IEmbeddedMessageContentHandler
 	{
 		/// <summary>
