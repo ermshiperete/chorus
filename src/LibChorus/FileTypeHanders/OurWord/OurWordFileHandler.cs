@@ -8,9 +8,11 @@ using Chorus.Utilities;
 using Chorus.VcsDrivers.Mercurial;
 using Palaso.IO;
 using Palaso.Progress;
+using System.ComponentModel.Composition;
 
 namespace Chorus.FileTypeHanders.OurWord
 {
+	[Export(typeof(IChorusFileTypeHandler))]
 	public class OurWordFileHandler : IChorusFileTypeHandler
 	{
 		internal OurWordFileHandler()

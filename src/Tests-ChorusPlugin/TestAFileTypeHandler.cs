@@ -5,9 +5,11 @@ using Chorus.merge;
 using Chorus.VcsDrivers.Mercurial;
 using Palaso.IO;
 using Palaso.Progress;
+using System.ComponentModel.Composition;
 
 namespace Tests_ChorusPlugin
 {
+	[Export(typeof(IChorusFileTypeHandler))]
 	internal class TestAFileTypeHandler : IChorusFileTypeHandler
 	{
 		#region Implementation of IChorusFileTypeHandler

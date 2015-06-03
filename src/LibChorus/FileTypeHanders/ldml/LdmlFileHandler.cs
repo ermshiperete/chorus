@@ -12,12 +12,14 @@ using Chorus.VcsDrivers.Mercurial;
 using Palaso.IO;
 using Palaso.Progress;
 using Palaso.Xml;
+using System.ComponentModel.Composition;
 
 namespace Chorus.FileTypeHanders.ldml
 {
 	///<summary>
 	/// Implementation of the IChorusFileTypeHandler interface to handle LDML files
 	///</summary>
+	[Export(typeof(IChorusFileTypeHandler))]
 	public class LdmlFileHandler : IChorusFileTypeHandler
 	{
 		internal LdmlFileHandler()

@@ -8,12 +8,14 @@ using Chorus.merge.xml.generic;
 using Palaso.Code;
 using Palaso.IO;
 using Palaso.Progress;
+using System.ComponentModel.Composition;
 
 namespace Chorus.FileTypeHanders
 {
 	/// <summary>
 	/// Handler for files with extension of ".lift-ranges".
 	/// </summary>
+	[Export(typeof(IChorusFileTypeHandler))]
 	public class LiftRangesFileTypeHandler : IChorusFileTypeHandler
 	{
 		internal LiftRangesFileTypeHandler()

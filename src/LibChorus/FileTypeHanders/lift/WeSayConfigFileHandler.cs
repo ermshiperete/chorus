@@ -5,9 +5,11 @@ using Chorus.merge;
 using Chorus.VcsDrivers.Mercurial;
 using Palaso.IO;
 using Palaso.Progress;
+using System.ComponentModel.Composition;
 
 namespace Chorus.FileTypeHanders.lift
 {
+	[Export(typeof(IChorusFileTypeHandler))]
 	public class WeSayConfigFileHandler : IChorusFileTypeHandler
 	{
 		internal WeSayConfigFileHandler()

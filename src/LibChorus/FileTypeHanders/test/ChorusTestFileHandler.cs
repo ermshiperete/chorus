@@ -6,9 +6,12 @@ using Chorus.sync;
 using Chorus.VcsDrivers.Mercurial;
 using Palaso.IO;
 using Palaso.Progress;
+using System.ComponentModel.Composition;
 
 namespace Chorus.FileTypeHanders.test
 {
+	[Export(typeof(IChorusFileTypeHandler))]
+	[PartMetadata("Scope", "UnitTest")]
 	public class ChorusTestFileHandler : IChorusFileTypeHandler
 	{
 		internal ChorusTestFileHandler()

@@ -10,6 +10,7 @@ using Chorus.notes;
 using Palaso.IO;
 using Palaso.Progress;
 using Palaso.Xml;
+using System.ComponentModel.Composition;
 
 namespace Chorus.FileTypeHanders
 {
@@ -21,6 +22,7 @@ namespace Chorus.FileTypeHanders
 	/// marke the status of things.  In addition, the chorus merger adds annotations when
 	/// it encounters a conflict, so that the team can later review what was done by the merger and make changes.
 	/// </summary>
+	[Export(typeof(IChorusFileTypeHandler))]
 	public class ChorusNotesFileHandler : IChorusFileTypeHandler
 	{
 		internal ChorusNotesFileHandler()

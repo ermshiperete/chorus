@@ -207,6 +207,7 @@
 	<Reference Include="System.ServiceModel" />
 	<Reference Include="System.Xml" />
 	<Reference Include="System.Xml.Linq" />
+    <Reference Include="System.ComponentModel.Composition" />
   </ItemGroup>
   <ItemGroup>
 	<Compile Include="ChorusHub\ChorusHubOptions.cs" />

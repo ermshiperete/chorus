@@ -7,9 +7,11 @@ using Chorus.VcsDrivers.Mercurial;
 using System.Linq;
 using Palaso.IO;
 using Palaso.Progress;
+using System.ComponentModel.Composition;
 
 namespace Chorus.FileTypeHanders.image
 {
+	[Export(typeof(IChorusFileTypeHandler))]
 	public class ImageFileTypeHandler : IChorusFileTypeHandler
 	{
 		internal ImageFileTypeHandler()

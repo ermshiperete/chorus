@@ -9,11 +9,11 @@ using Chorus.Utilities;
 using Chorus.VcsDrivers.Mercurial;
 using Palaso.IO;
 using Palaso.Progress;
+using System.ComponentModel.Composition;
 
 namespace Chorus.FileTypeHanders.text
 {
-
-
+	[Export(typeof(IChorusFileTypeHandler))]
 	public class TextFileTypeHandler : IChorusFileTypeHandler
 	{
 		internal TextFileTypeHandler()
