@@ -29,19 +29,10 @@ namespace Chorus.FileTypeHanders
 			Expression<Func<ComposablePartDefinition, bool>> filter = null,
 			string[] additionalAssemblies = null)
 		{
-			var libChorusAssembly = Assembly.GetExecutingAssembly();
-
-			//Set the codebase variable appropriately depending on the OS
-			var codeBase = libChorusAssembly.CodeBase.Substring(LinuxUtils.IsUnix ? 7 : 8);
-
-			var dirname = Path.GetDirectoryName(codeBase);
-			//var baseDir = new Uri(dirname).AbsolutePath; // NB: The Uri class in Windows and Mono are not the same.
-			var baseDir = dirname;
-
 			using (var aggregateCatalog = new AggregateCatalog())
 			{
-				aggregateCatalog.Catalogs.Add(new AssemblyCatalog(libChorusAssembly));
-				aggregateCatalog.Catalogs.Add(new DirectoryCatalog(baseDir, "*-ChorusPlugin.dll"));
+				aggregateCatalog.Catalogs.Add(new AssemblyCatalog(Assembly.GetExecutingAssembly()));
+				aggregateCatalog.Catalogs.Add(new DirectoryCatalog(".", "*-ChorusPlugin.dll"));
 				if (additionalAssemblies != null)
 				{
 					foreach (var assemblyPath in additionalAssemblies)
